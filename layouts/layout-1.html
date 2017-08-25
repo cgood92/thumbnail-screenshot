@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="http://www.example.com/page.html">
+    <meta charset="utf-8">
+    <style type="text/css">
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+        border: 2px solid black;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    figure {
+        border: 1px solid gray;
+        width: 50%;
+        overflow: hidden;
+        margin: 8px;
+        /* For color demo, since images weren't working */
+        width: 200px;
+        height: 200px;
+    }
+
+    img {
+        object-fit: none;
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .full {
+        width: 100%;
+    }
+
+    .flex {
+        display: -webkit-flex;
+        display: flex;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="flex">
+        <!-- Currently looking into why images work 50/50 times -->
+        <figure style="background-color: {{color1}}">
+          <!-- <img src="{{image1}}" /> -->
+        </figure>
+        <!-- Currently looking into why images work 50/50 times -->
+        <figure style="background-color: {{color2}}">
+          <!-- <img src="{{image2}}" /> -->
+        </figure>
+      </div>
+      <!-- Currently looking into why images work 50/50 times -->
+      <figure style="background-color: {{color3}}" class="full">
+        <!-- <img src="{{image3}}" /> -->
+      </figure>
+    </main>
+  </body>
+</html>
